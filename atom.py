@@ -74,11 +74,11 @@ invlv = [25, 100, 175, 250, 325, 400, 475]
 # Array con los subniveles
 sub = [1, 2, 3, 4, 5, 6, 7]
 
-#Variable infinity para hacer que el programa se cicle indefinidamente hasta que el usuario decida cerrar la teminal
+#Variable infinity para hacer que el programa se cicle indefinidamente hasta que el usuario decida cerrar la terminal
 infinity = True
 
 #Titulo del programa en la terminal
-print("====SIMULADOR DE EXITACION DE UN ELECTRON===")
+print("====SIMULADOR DE EXCITACION DE UN ELECTRON===")
 
 # Loop infinito hasta que el usuario decida cerrar la terminal
 while infinity == True:
@@ -90,21 +90,20 @@ while infinity == True:
     for i in range (7):
         simlayout(i, sim)
 
-# TEST
+# MAIN CONTENT
     # Inicialización en cada ciclo de algunas variables a validar
     target=''
     e1_input=-1
-    mov = ''
-    
+    mov = ''    
     numatom=0
 
     # Introducción y validación de la posición del primer electrón
-    while (e1_input > 7 or e1_input < 0):
+    while (e1_input > 7 or e1_input < 2):
         e1_input= input('\nIntroduzca el subnivel del primer electron: ')
         e1_input = int(e1_input)
-        if (e1_input > 7 or e1_input < 1):
+        if (e1_input > 7 or e1_input < 2):
             print("Subnivel invalido, intente de nuevo")
-        elif (e1_input==1):
+        if (e1_input==1):
             print("No puede haber excitacion si ambos electrones estan en el mismo nivel!")
 
     # Dibujo de los electrones
